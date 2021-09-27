@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  BananaSociety
+//  SocialNetwork
 //
-//  Created by Евгений on 21.08.21.
+//  Created by Евгений on 4.09.21.
 //
 
 import UIKit

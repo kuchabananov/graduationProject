@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BananaSociety
+//  SocialNetwork
 //
-//  Created by Евгений on 21.08.21.
+//  Created by Евгений on 4.09.21.
 //
 
 import UIKit
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "BananaSociety")
+        let container = NSPersistentContainer(name: "SocialNetwork")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
