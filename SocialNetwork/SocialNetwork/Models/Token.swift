@@ -10,7 +10,7 @@ import Foundation
 struct Token {
     
     var token: String
-    var expiresIn: Int
+    var expiresIn: Date
     var userId: String
     
 }

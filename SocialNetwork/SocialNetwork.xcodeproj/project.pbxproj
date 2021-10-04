@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E562F53227020C9C00DA43D6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562F53127020C9C00DA43D6 /* WebViewController.swift */; };
+		E5689384270AFEBC0039053F /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5689383270AFEBC0039053F /* MainMenu.storyboard */; };
+		E5689390270B0DA70039053F /* home grey 7.png in Resources */ = {isa = PBXBuildFile; fileRef = E568938F270B0DA60039053F /* home grey 7.png */; };
+		E5689392270B0EE60039053F /* education grey 5.png in Resources */ = {isa = PBXBuildFile; fileRef = E5689391270B0EE60039053F /* education grey 5.png */; };
+		E5689394270B0F450039053F /* education2 grey 5.png in Resources */ = {isa = PBXBuildFile; fileRef = E5689393270B0F450039053F /* education2 grey 5.png */; };
+		E5689396270B10840039053F /* follow grey 5.png in Resources */ = {isa = PBXBuildFile; fileRef = E5689395270B10840039053F /* follow grey 5.png */; };
+		E5689398270B12250039053F /* add info.png in Resources */ = {isa = PBXBuildFile; fileRef = E5689397270B12250039053F /* add info.png */; };
+		E568939B270B22ED0039053F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568939A270B22ED0039053F /* ProfileViewController.swift */; };
+		E568939D270B23020039053F /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568939C270B23020039053F /* AddInfoViewController.swift */; };
 		E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */; };
 		E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */; };
-		E56993F026E3AE0300F2C2EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EF26E3AE0300F2C2EF /* ViewController.swift */; };
-		E56993F326E3AE0300F2C2EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56993F126E3AE0300F2C2EF /* Main.storyboard */; };
+		E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EF26E3AE0300F2C2EF /* StartViewController.swift */; };
+		E56993F326E3AE0300F2C2EF /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56993F126E3AE0300F2C2EF /* SignIn.storyboard */; };
 		E56993F626E3AE0300F2C2EF /* SocialNetwork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56993F426E3AE0300F2C2EF /* SocialNetwork.xcdatamodeld */; };
 		E56993F826E3AE0500F2C2EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56993F726E3AE0500F2C2EF /* Assets.xcassets */; };
 		E56993FB26E3AE0500F2C2EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56993F926E3AE0500F2C2EF /* LaunchScreen.storyboard */; };
@@ -20,11 +29,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E562F53127020C9C00DA43D6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E5689383270AFEBC0039053F /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
+		E568938F270B0DA60039053F /* home grey 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home grey 7.png"; sourceTree = "<group>"; };
+		E5689391270B0EE60039053F /* education grey 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "education grey 5.png"; sourceTree = "<group>"; };
+		E5689393270B0F450039053F /* education2 grey 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "education2 grey 5.png"; sourceTree = "<group>"; };
+		E5689395270B10840039053F /* follow grey 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow grey 5.png"; sourceTree = "<group>"; };
+		E5689397270B12250039053F /* add info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add info.png"; sourceTree = "<group>"; };
+		E568939A270B22ED0039053F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E568939C270B23020039053F /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		E56993E826E3AE0300F2C2EF /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E56993EF26E3AE0300F2C2EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E56993F226E3AE0300F2C2EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E56993EF26E3AE0300F2C2EF /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		E56993F226E3AE0300F2C2EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		E56993F526E3AE0300F2C2EF /* SocialNetwork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialNetwork.xcdatamodel; sourceTree = "<group>"; };
 		E56993F726E3AE0500F2C2EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56993FA26E3AE0500F2C2EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +63,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5689382270AFE6E0039053F /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E5689383270AFEBC0039053F /* MainMenu.storyboard */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		E5689385270B0A970039053F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E5689386270B0AA00039053F /* Icons */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		E5689386270B0AA00039053F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E568938F270B0DA60039053F /* home grey 7.png */,
+				E5689391270B0EE60039053F /* education grey 5.png */,
+				E5689393270B0F450039053F /* education2 grey 5.png */,
+				E5689395270B10840039053F /* follow grey 5.png */,
+				E5689397270B12250039053F /* add info.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		E5689399270B22CC0039053F /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E568939A270B22ED0039053F /* ProfileViewController.swift */,
+				E568939C270B23020039053F /* AddInfoViewController.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
 		E56993DF26E3AE0300F2C2EF = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +160,9 @@
 		E569940E26FCBF0E00F2C2EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E56993EF26E3AE0300F2C2EF /* ViewController.swift */,
+				E5689399270B22CC0039053F /* MainMenu */,
+				E56993EF26E3AE0300F2C2EF /* StartViewController.swift */,
+				E562F53127020C9C00DA43D6 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,7 +170,8 @@
 		E569940F26FCBF3200F2C2EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E56993F126E3AE0300F2C2EF /* Main.storyboard */,
+				E5689382270AFE6E0039053F /* MainMenu */,
+				E56993F126E3AE0300F2C2EF /* SignIn.storyboard */,
 				E56993F926E3AE0500F2C2EF /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -122,6 +180,7 @@
 		E569941026FCBF5000F2C2EF /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E5689385270B0A970039053F /* Image */,
 				E56993F726E3AE0500F2C2EF /* Assets.xcassets */,
 			);
 			path = SupportFiles;
@@ -184,9 +243,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5689384270AFEBC0039053F /* MainMenu.storyboard in Resources */,
+				E5689390270B0DA70039053F /* home grey 7.png in Resources */,
 				E56993FB26E3AE0500F2C2EF /* LaunchScreen.storyboard in Resources */,
+				E5689398270B12250039053F /* add info.png in Resources */,
+				E5689396270B10840039053F /* follow grey 5.png in Resources */,
+				E5689392270B0EE60039053F /* education grey 5.png in Resources */,
 				E56993F826E3AE0500F2C2EF /* Assets.xcassets in Resources */,
-				E56993F326E3AE0300F2C2EF /* Main.storyboard in Resources */,
+				E56993F326E3AE0300F2C2EF /* SignIn.storyboard in Resources */,
+				E5689394270B0F450039053F /* education2 grey 5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,25 +262,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56993F026E3AE0300F2C2EF /* ViewController.swift in Sources */,
+				E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */,
 				E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */,
 				E569940326E8BDA500F2C2EF /* NetworkManager.swift in Sources */,
 				E569940526EA479500F2C2EF /* User.swift in Sources */,
 				E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */,
 				E56993F626E3AE0300F2C2EF /* SocialNetwork.xcdatamodeld in Sources */,
+				E568939D270B23020039053F /* AddInfoViewController.swift in Sources */,
+				E568939B270B22ED0039053F /* ProfileViewController.swift in Sources */,
 				E569940C26FC9C6500F2C2EF /* Token.swift in Sources */,
+				E562F53227020C9C00DA43D6 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E56993F126E3AE0300F2C2EF /* Main.storyboard */ = {
+		E56993F126E3AE0300F2C2EF /* SignIn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E56993F226E3AE0300F2C2EF /* Base */,
 			);
-			name = Main.storyboard;
+			name = SignIn.storyboard;
 			sourceTree = "<group>";
 		};
 		E56993F926E3AE0500F2C2EF /* LaunchScreen.storyboard */ = {

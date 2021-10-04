@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkError: Error {
     case domainError
     case decodingError
+    case authError
 }
 
 enum UserFields: String {
@@ -34,9 +36,26 @@ class NetworkManager {
     private let serverUrl = "https://api.vk.com/method/"
     
     //let getUser = serverPath + "users.get?user_ids=\(String(describing: NetworkManager.shared.accessToken?.userId))"
+    private func presentWebView () {
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            let webVC = WebViewController()
+            webVC.modalPresentationStyle = .overCurrentContext
+            topController.present(webVC, animated: true, completion: nil)
+        }
+    }
     
     func createUrlWithParams(method: String, params: [String : Any]) -> URL? {
+        guard let expiresIn = NetworkManager.shared.accessToken?.expiresIn, expiresIn > Date() else {
+            presentWebView()
+            return nil
+        }
+            
         let token = (NetworkManager.shared.accessToken?.token)!
+        //let token = "a0a196d190e9952cd1bdc41600010dde7c093cb11588b85af05989aa7eb28e6c0d9ba848284fe8c08ccab"
         //let userId = (NetworkManager.shared.accessToken?.userId)!
         
         //var paramsDict: [String: Any] = ["access_token": token, "user_ids": userId, "v": "5.131"]
@@ -48,47 +67,28 @@ class NetworkManager {
         
         let paramsStr: String = paramsDict.map { "\($0)=\($1)" }.joined(separator: "&")
         
-
         let urlString = serverUrl + method + "?" + paramsStr
         return URL(string: urlString)
     }
     
-//    func fetchUser() {
-//        guard let url = NetworkManager.shared.createUrlWithParams(method: "users.get", params: ["fields": "photo_max"]) else { return }
-//        var user: User?
-//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            guard let data = data else { return }
-//            do {
-//                struct Response: Decodable {
-//                    var response: [User]?
-//                }
-//                let response = try JSONDecoder().decode(Response.self, from: data)
-//                user = (response.response?.first)
-////                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-////                    print(json)
-////                }
-//                //print(user)
-//            } catch {
-//                print(error)
-//            }
-//        }
-//        task.resume()
-//    }
-    
     func performRequest(url: URL, completion: @escaping (Data?, Error?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             
-            guard let data = data, error == nil else {
+            guard let data = data, let strongSelf = self, error == nil else {
                 if let error = error as NSError?, error.domain == NSURLErrorDomain {
                     completion(nil, error)
                 }
                 return
             }
             do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                    if let error = json["error"] as? [String : Any], let errorCode = error["error_code"] as? Int {
+                        if errorCode == 5 {
+                            strongSelf.presentWebView()
+                        }
+                        completion(nil, NetworkError.authError)
+                    }
                     completion(data, nil)
-                    //проверить на ошибку token expiration
-                    //если ошибка на токен - > перезапрашиваем токен
                 }
             } catch let e {
                 completion(nil, e)
@@ -99,11 +99,12 @@ class NetworkManager {
     }
 
     func getUsers(userId: String, completion: @escaping (Result<User,NetworkError>) -> Void) {
+        
         struct Response: Decodable {
             var response: [User]?
         }
         
-        guard let url = createUrlWithParams(method: "users.get", params: ["fields" : ["photo_max", "sex"], "user_ids": userId]) else { return }
+        guard let url = createUrlWithParams(method: "users.get", params: ["fields" : "photo_max,sex,bdate,city,country,home_town,online,education,schools,status,nickname,military,counters,personal", "user_ids": userId]) else { return }
         
         var user: User?
         performRequest(url: url) { data, error in
@@ -112,12 +113,11 @@ class NetworkManager {
                 let respone = try JSONDecoder().decode(Response.self, from: data!)
                 user = respone.response?.first
                 completion(.success(user!))
-            } catch {
+            } catch let e {
+                print(e)
                 completion(.failure(.decodingError))
             }
-
         }
-        
     }
         
 }

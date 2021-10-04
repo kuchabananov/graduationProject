@@ -1,24 +1,28 @@
 //
-//  ViewController.swift
+//  WebViewController.swift
 //  SocialNetwork
 //
-//  Created by Евгений on 4.09.21.
+//  Created by Евгений on 27.09.21.
 //
 
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+protocol WebViewControllerDelegate: AnyObject {
+    func webViewDidFinish()
+}
+
+class WebViewController: UIViewController {
     
-    var user: User?
-    
+    weak var delegate: WebViewControllerDelegate?
     var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupWebView()
     }
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    
+    func setupWebView() {
         webView = WKWebView(frame: self.view.frame)
         webView.navigationDelegate = self
         self.view.addSubview(webView)
@@ -28,10 +32,10 @@ class ViewController: UIViewController {
         }
         webView.allowsBackForwardNavigationGestures = true
     }
+    
 }
 
-
-extension ViewController: WKNavigationDelegate {
+extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         decisionHandler(.allow)
         if let response = navigationResponse.response.url?.absoluteString, response.contains("access_token=") {
@@ -43,8 +47,8 @@ extension ViewController: WKNavigationDelegate {
                 let responseStringArray = responseString.components(separatedBy: "&")
             
             var token: String?
-            var expiresInInt: Int?
             var userId: String?
+            var expiresInDate: Date?
             
             for item in responseStringArray {
                 let params = item.components(separatedBy: "=")
@@ -52,22 +56,20 @@ extension ViewController: WKNavigationDelegate {
                     token = params.last
                 } else if params.first == "expires_in"{
                     if let expiresIn = params.last {
-                        expiresInInt = Int(expiresIn)
+                        if let expiresInInt = Int(expiresIn) {
+                            let today = Date()
+                            expiresInDate = Calendar.current.date(byAdding: .second, value: expiresInInt, to: today)
+                        }
                     }
                 } else if params.first == "user_id" {
                     userId = params.last
                 }
             }
-            guard let token = token, let expiresInInt = expiresInInt, let userId = userId else { return }
-            NetworkManager.shared.accessToken = Token(token: token, expiresIn: expiresInInt, userId: userId)
-            NetworkManager.shared.getUsers(userId: userId) { [weak self] result in
-                switch result {
-                case .success(let user):
-                    print(user)
-                case .failure:
-                    print("FAILED")
-                }
-            }
+                        
+            guard let token = token, let expiresInDate = expiresInDate, let userId = userId else { return }
+            NetworkManager.shared.accessToken = Token(token: token, expiresIn: expiresInDate, userId: userId)
+            delegate?.webViewDidFinish()
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
