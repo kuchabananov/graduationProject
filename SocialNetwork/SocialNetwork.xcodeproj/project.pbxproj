@@ -16,6 +16,13 @@
 		E5689398270B12250039053F /* add info.png in Resources */ = {isa = PBXBuildFile; fileRef = E5689397270B12250039053F /* add info.png */; };
 		E568939B270B22ED0039053F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568939A270B22ED0039053F /* ProfileViewController.swift */; };
 		E568939D270B23020039053F /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568939C270B23020039053F /* AddInfoViewController.swift */; };
+		E568BFAB270C738E00FE8B06 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFAA270C738E00FE8B06 /* AnimationView.swift */; };
+		E568BFAD270C739A00FE8B06 /* AnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E568BFAC270C739A00FE8B06 /* AnimationView.xib */; };
+		E568BFB0270C78C900FE8B06 /* downloadgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = E568BFAF270C78C900FE8B06 /* downloadgif.gif */; };
+		E568BFB3270C8BD100FE8B06 /* UIImage+SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFB2270C8BD100FE8B06 /* UIImage+SocialNetwork.swift */; };
+		E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFB7270C990400FE8B06 /* TabBarController.swift */; };
+		E568BFBB270DA92D00FE8B06 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFBA270DA92D00FE8B06 /* InfoCell.swift */; };
+		E568BFBD270DB3ED00FE8B06 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */; };
 		E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */; };
 		E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */; };
 		E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EF26E3AE0300F2C2EF /* StartViewController.swift */; };
@@ -38,6 +45,13 @@
 		E5689397270B12250039053F /* add info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add info.png"; sourceTree = "<group>"; };
 		E568939A270B22ED0039053F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E568939C270B23020039053F /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		E568BFAA270C738E00FE8B06 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		E568BFAC270C739A00FE8B06 /* AnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationView.xib; sourceTree = "<group>"; };
+		E568BFAF270C78C900FE8B06 /* downloadgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = downloadgif.gif; sourceTree = "<group>"; };
+		E568BFB2270C8BD100FE8B06 /* UIImage+SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SocialNetwork.swift"; sourceTree = "<group>"; };
+		E568BFB7270C990400FE8B06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E568BFBA270DA92D00FE8B06 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
 		E56993E826E3AE0300F2C2EF /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,13 +105,64 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
-		E5689399270B22CC0039053F /* MainMenu */ = {
+		E5689399270B22CC0039053F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E568BFB7270C990400FE8B06 /* TabBarController.swift */,
+				E568BFB6270C988A00FE8B06 /* Profile */,
+				E568BFBE270DB44100FE8B06 /* FriendsList */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		E568BFA9270C730300FE8B06 /* AnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				E568BFAA270C738E00FE8B06 /* AnimationView.swift */,
+				E568BFAC270C739A00FE8B06 /* AnimationView.xib */,
+			);
+			path = AnimationView;
+			sourceTree = "<group>";
+		};
+		E568BFAE270C78BB00FE8B06 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				E568BFAF270C78C900FE8B06 /* downloadgif.gif */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
+		E568BFB1270C8BAD00FE8B06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E568BFB2270C8BD100FE8B06 /* UIImage+SocialNetwork.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E568BFB6270C988A00FE8B06 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				E568939A270B22ED0039053F /* ProfileViewController.swift */,
 				E568939C270B23020039053F /* AddInfoViewController.swift */,
 			);
-			path = MainMenu;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E568BFB9270DA8FF00FE8B06 /* CellManager */ = {
+			isa = PBXGroup;
+			children = (
+				E568BFBA270DA92D00FE8B06 /* InfoCell.swift */,
+				E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */,
+			);
+			path = CellManager;
+			sourceTree = "<group>";
+		};
+		E568BFBE270DB44100FE8B06 /* FriendsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FriendsList;
 			sourceTree = "<group>";
 		};
 		E56993DF26E3AE0300F2C2EF = {
@@ -119,6 +184,7 @@
 		E56993EA26E3AE0300F2C2EF /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				E568BFB1270C8BAD00FE8B06 /* Extensions */,
 				E569940A26EA844E00F2C2EF /* NetworkManager */,
 				E569940626EA5C5400F2C2EF /* Models */,
 				E569940E26FCBF0E00F2C2EF /* Controllers */,
@@ -160,9 +226,11 @@
 		E569940E26FCBF0E00F2C2EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5689399270B22CC0039053F /* MainMenu */,
+				E568BFB9270DA8FF00FE8B06 /* CellManager */,
+				E568BFA9270C730300FE8B06 /* AnimationView */,
 				E56993EF26E3AE0300F2C2EF /* StartViewController.swift */,
 				E562F53127020C9C00DA43D6 /* WebViewController.swift */,
+				E5689399270B22CC0039053F /* TabBarController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +248,7 @@
 		E569941026FCBF5000F2C2EF /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E568BFAE270C78BB00FE8B06 /* Gifs */,
 				E5689385270B0A970039053F /* Image */,
 				E56993F726E3AE0500F2C2EF /* Assets.xcassets */,
 			);
@@ -246,11 +315,13 @@
 				E5689384270AFEBC0039053F /* MainMenu.storyboard in Resources */,
 				E5689390270B0DA70039053F /* home grey 7.png in Resources */,
 				E56993FB26E3AE0500F2C2EF /* LaunchScreen.storyboard in Resources */,
+				E568BFAD270C739A00FE8B06 /* AnimationView.xib in Resources */,
 				E5689398270B12250039053F /* add info.png in Resources */,
 				E5689396270B10840039053F /* follow grey 5.png in Resources */,
 				E5689392270B0EE60039053F /* education grey 5.png in Resources */,
 				E56993F826E3AE0500F2C2EF /* Assets.xcassets in Resources */,
 				E56993F326E3AE0300F2C2EF /* SignIn.storyboard in Resources */,
+				E568BFB0270C78C900FE8B06 /* downloadgif.gif in Resources */,
 				E5689394270B0F450039053F /* education2 grey 5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,15 +334,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */,
+				E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */,
 				E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */,
 				E569940326E8BDA500F2C2EF /* NetworkManager.swift in Sources */,
+				E568BFB3270C8BD100FE8B06 /* UIImage+SocialNetwork.swift in Sources */,
+				E568BFBD270DB3ED00FE8B06 /* FriendsListCell.swift in Sources */,
 				E569940526EA479500F2C2EF /* User.swift in Sources */,
 				E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */,
 				E56993F626E3AE0300F2C2EF /* SocialNetwork.xcdatamodeld in Sources */,
 				E568939D270B23020039053F /* AddInfoViewController.swift in Sources */,
 				E568939B270B22ED0039053F /* ProfileViewController.swift in Sources */,
+				E568BFAB270C738E00FE8B06 /* AnimationView.swift in Sources */,
 				E569940C26FC9C6500F2C2EF /* Token.swift in Sources */,
 				E562F53227020C9C00DA43D6 /* WebViewController.swift in Sources */,
+				E568BFBB270DA92D00FE8B06 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

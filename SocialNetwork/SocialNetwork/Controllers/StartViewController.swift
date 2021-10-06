@@ -20,26 +20,25 @@ class StartViewController: UIViewController {
         webVC.modalPresentationStyle = .overCurrentContext
         present(webVC, animated: true, completion: nil)
     }
+    
 
+    @IBAction func qwerty(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "MainMenu", bundle: nil)
+        let mainMenuVC = storyboard.instantiateViewController(identifier: "tabBarController")
+        navigationController?.pushViewController(mainMenuVC, animated: true)
+    }
+    
 }
 
 extension StartViewController: WebViewControllerDelegate {
+    
     func webViewDidFinish() {
         guard let userId = NetworkManager.shared.accessToken?.userId else { return }
-        
-        let profileVC = ProfileViewController()
-        profileVC.userId = userId
-        profileVC.modalPresentationStyle = .overCurrentContext
-        navigationController?.present(profileVC, animated: true, completion: nil)
-        //present(profileVC, animated: true, completion: nil)
-        
-//        NetworkManager.shared.getUsers(userId: userId) { [weak self] result in
-//            switch result {
-//            case .success(let user):
-//                print(user)
-//            case .failure:
-//                print("FAILED")
-//            }
-//        }
+        let storyboard = UIStoryboard.init(name: "MainMenu", bundle: nil)
+        if let mainMenuVC = storyboard.instantiateViewController(identifier: "tabBarController") as? TabBarController {
+            mainMenuVC.userId = userId
+            navigationController?.pushViewController(mainMenuVC, animated: true)
+        }
     }
+    
 }

@@ -55,10 +55,7 @@ class NetworkManager {
         }
             
         let token = (NetworkManager.shared.accessToken?.token)!
-        //let token = "a0a196d190e9952cd1bdc41600010dde7c093cb11588b85af05989aa7eb28e6c0d9ba848284fe8c08ccab"
-        //let userId = (NetworkManager.shared.accessToken?.userId)!
-        
-        //var paramsDict: [String: Any] = ["access_token": token, "user_ids": userId, "v": "5.131"]
+
         var paramsDict: [String : Any] = ["access_token": token, "v": "5.131"]
 
         params.forEach { (key, value) in
@@ -104,7 +101,7 @@ class NetworkManager {
             var response: [User]?
         }
         
-        guard let url = createUrlWithParams(method: "users.get", params: ["fields" : "photo_max,sex,bdate,city,country,home_town,online,education,schools,status,nickname,military,counters,personal", "user_ids": userId]) else { return }
+        guard let url = createUrlWithParams(method: "users.get", params: ["fields" : "photo_max,sex,bdate,city,country,home_town,online,education,schools,status,screen_name,military,counters,personal", "user_ids": userId]) else { return }
         
         var user: User?
         performRequest(url: url) { data, error in
@@ -112,7 +109,9 @@ class NetworkManager {
             do {
                 let respone = try JSONDecoder().decode(Response.self, from: data!)
                 user = respone.response?.first
-                completion(.success(user!))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    completion(.success(user!))
+                }
             } catch let e {
                 print(e)
                 completion(.failure(.decodingError))

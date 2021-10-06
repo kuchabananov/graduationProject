@@ -20,18 +20,23 @@ struct User: Decodable {
         case country
         case homeTown = "home_town"
         case online
-        case education
+        //case education
         //case schools
         case status
-        case nickname
+        case screenName = "screen_name"
         case military
         case counters
         case personal
+        case university
+        case universityName = "university_name"
+        case faculty
+        case facultyName = "faculty_name"
+        case graduation
     }
     
     var id: Int?
-    var firstName: String?
-    var lastName: String?
+    var firstName: String
+    var lastName: String
     var photo: String?
     var sex: Int?
     var birthDate: String?
@@ -39,13 +44,18 @@ struct User: Decodable {
     var country: Country?
     var homeTown: String?
     var online: Int?
-    var education: Education?
-    //var schools: [Any]?
+    //var education: Education?
+    //var schools: [Schools]?
     var status: String?
-    var nickname: String?
+    var screenName: String?
     var military: [Military]?
     var counters: Counters?
     var personal: Personal?
+    var university: Int?
+    var universityName: String?
+    var faculty: Int?
+    var facultyName: String?
+    var graduation: Int?
     
 }
 
@@ -73,23 +83,23 @@ struct Country: Decodable {
     
 }
 
-struct Education: Decodable {
-    
-    enum CodingKeys: String, CodingKey {
-        case university
-        case universityName = "university_name"
-        case faculty
-        case facultyName = "faculty_name"
-        case graduation
-    }
-    
-    var university: Int?
-    var universityName: String?
-    var faculty: Int?
-    var facultyName: String?
-    var graduation: Int?
-    
-}
+//struct Education: Decodable {
+//
+//    enum CodingKeys: String, CodingKey {
+//        case university
+//        case universityName = "university_name"
+//        case faculty
+//        case facultyName = "faculty_name"
+//        case graduation
+//    }
+//
+//    var university: Int?
+//    var universityName: String?
+//    var faculty: Int?
+//    var facultyName: String?
+//    var graduation: Int?
+//
+//}
 
 struct Military: Decodable {
     
@@ -117,6 +127,7 @@ struct Counters: Decodable {
         case friends
         case photos
         case followers
+        case groups
     }
     
     var videos: Int?
@@ -124,6 +135,7 @@ struct Counters: Decodable {
     var friends: Int?
     var photos: Int?
     var followers: Int?
+    var groups: Int?
     
 }
 
