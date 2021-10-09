@@ -20,7 +20,6 @@ struct User: Decodable {
         case country
         case homeTown = "home_town"
         case online
-        //case education
         //case schools
         case status
         case screenName = "screen_name"
@@ -44,7 +43,6 @@ struct User: Decodable {
     var country: Country?
     var homeTown: String?
     var online: Int?
-    //var education: Education?
     //var schools: [Schools]?
     var status: String?
     var screenName: String?

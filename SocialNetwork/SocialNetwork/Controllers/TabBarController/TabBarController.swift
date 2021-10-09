@@ -9,33 +9,36 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    var userId: String?
+    var userId: String? {
+        didSet {
+            guard let userId = userId else { return }
+            profileController?.reloadPage(userId: userId)
+            friendsController?.reloadPage(userId: userId)
+        }
+    }
+    
+    var profileController: ProfileViewController? {
+        return viewControllers?[0] as? ProfileViewController
+    }
+    var friendsController: FriendsViewController? {
+        return viewControllers?[1] as? FriendsViewController
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendUserId()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
 
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    
 //    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 //        super.tabBar(tabBar, didSelect: item)
-//        let firstVc = viewControllers?[0] as? ProfileViewController
-//        firstVc?.userId = userId
+//        let profVC = viewControllers?[0] as? ProfileViewController
 //    }
+
     
-    private func sendUserId() {
-        let myTab = self.viewControllers![0] as? ProfileViewController
-        myTab!.userId = userId
-    }
+
     
 }

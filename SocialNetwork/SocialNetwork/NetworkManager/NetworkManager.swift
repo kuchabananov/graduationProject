@@ -107,17 +107,45 @@ class NetworkManager {
         performRequest(url: url) { data, error in
 
             do {
-                let respone = try JSONDecoder().decode(Response.self, from: data!)
-                user = respone.response?.first
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                let response = try JSONDecoder().decode(Response.self, from: data!)
+                user = response.response?.first
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     completion(.success(user!))
                 }
-            } catch let e {
-                print(e)
+            } catch {
                 completion(.failure(.decodingError))
             }
         }
     }
+    
+    func getFriends(userId: String, completion: @escaping (Result<[Friend],NetworkError>) -> Void) {
+        
+        struct Response: Decodable {
+            var response: Items?
+        }
+        
+        struct Items: Decodable {
+            var count: Int?
+            var items: [Friend]?
+        }
+        
+        guard let url = createUrlWithParams(method: "friends.get", params: ["fields" : "photo_max,city", "user_id" : userId, "order" : "name"]) else { return }
+        
+        var friends: [Friend]?
+        
+        performRequest(url: url) { data, error in
+            
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data!)
+                let items = response.response
+                friends = items?.items
+                completion(.success(friends!))
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }
+    }
+        
         
 }
     

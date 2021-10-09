@@ -23,6 +23,8 @@
 		E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFB7270C990400FE8B06 /* TabBarController.swift */; };
 		E568BFBB270DA92D00FE8B06 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFBA270DA92D00FE8B06 /* InfoCell.swift */; };
 		E568BFBD270DB3ED00FE8B06 /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */; };
+		E568BFC0270EFC2600FE8B06 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFBF270EFC2600FE8B06 /* Friends.swift */; };
+		E568BFC327119EBC00FE8B06 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E568BFC227119EBB00FE8B06 /* FriendsViewController.swift */; };
 		E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */; };
 		E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */; };
 		E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56993EF26E3AE0300F2C2EF /* StartViewController.swift */; };
@@ -52,6 +54,8 @@
 		E568BFB7270C990400FE8B06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E568BFBA270DA92D00FE8B06 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
+		E568BFBF270EFC2600FE8B06 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		E568BFC227119EBB00FE8B06 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		E56993E826E3AE0300F2C2EF /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56993EB26E3AE0300F2C2EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56993ED26E3AE0300F2C2EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		E568BFBE270DB44100FE8B06 /* FriendsList */ = {
 			isa = PBXGroup;
 			children = (
+				E568BFC227119EBB00FE8B06 /* FriendsViewController.swift */,
 			);
 			path = FriendsList;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			children = (
 				E569940B26FC9C6500F2C2EF /* Token.swift */,
 				E569940426EA479500F2C2EF /* User.swift */,
+				E568BFBF270EFC2600FE8B06 /* Friends.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +342,8 @@
 				E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */,
 				E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */,
 				E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */,
+				E568BFC0270EFC2600FE8B06 /* Friends.swift in Sources */,
+				E568BFC327119EBC00FE8B06 /* FriendsViewController.swift in Sources */,
 				E569940326E8BDA500F2C2EF /* NetworkManager.swift in Sources */,
 				E568BFB3270C8BD100FE8B06 /* UIImage+SocialNetwork.swift in Sources */,
 				E568BFBD270DB3ED00FE8B06 /* FriendsListCell.swift in Sources */,

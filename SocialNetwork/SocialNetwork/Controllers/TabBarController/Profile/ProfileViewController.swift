@@ -10,7 +10,6 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     var animationView: AnimationView?
-    var userId: String?
     var user: User?
     
     @IBOutlet weak var screenNameLabel: UILabel!
@@ -32,21 +31,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        requestDataFromServer()
     }
     
     private func setupUI() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        userPhoto.layer.cornerRadius = 50
+        userPhoto.layer.cornerRadius = userPhoto.frame.size.width / 2
     }
     
-    private func requestDataFromServer() {
+    private func requestDataFromServer(userId: String) {
         startAnimation()
-        getUser()
+        getUser(userId: userId)
     }
-    
-    
-    
     
     
     private func startAnimation() {
@@ -59,7 +53,9 @@ class ProfileViewController: UIViewController {
         animationView = nil
     }
     
-    
+    public func reloadPage(userId: String) {
+        requestDataFromServer(userId: userId)
+    }
     
     private func reloadUI() {
         guard let user = self.user else { return }
@@ -88,8 +84,8 @@ class ProfileViewController: UIViewController {
     
 
     
-    private func getUser() {
-        guard let userId = userId else { return }
+    private func getUser(userId: String) {
+        //guard let userId = userId else { return }
         NetworkManager.shared.getUsers(userId: userId) { [weak self] result in
             switch result {
             case .success(let user):
