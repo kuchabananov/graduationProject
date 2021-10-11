@@ -14,16 +14,6 @@ enum NetworkError: Error {
     case authError
 }
 
-enum UserFields: String {
-    case photo50 = "photo_50"
-    case photo100 = "photo_100"
-    case home = "home_town"
-    case city = "city"
-    case country = "country"
-    case sex = "sex"
-    case birthData = "bdate"
-}
-
 class NetworkManager {
     
     private init () {}

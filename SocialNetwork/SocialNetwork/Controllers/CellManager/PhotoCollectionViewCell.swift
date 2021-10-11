@@ -11,4 +11,9 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var userPhoto: UIImageView!
     
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        userPhoto.image = nil
+    }
 }

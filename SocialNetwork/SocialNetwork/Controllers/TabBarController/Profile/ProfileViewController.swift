@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         setupUI()
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
@@ -49,13 +50,13 @@ class ProfileViewController: UIViewController {
     
     
     private func startAnimation() {
-        self.view.isUserInteractionEnabled = false
+        (tabBarController as? TabBarController)?.view.isUserInteractionEnabled = false
         animationView = AnimationView(frame: self.view.frame)
         self.view.addSubview(animationView!)
     }
     
     private func endAnimation() {
-        self.view.isUserInteractionEnabled = true
+        (tabBarController as? TabBarController)?.view.isUserInteractionEnabled = true
         animationView?.removeFromSuperview()
         animationView = nil
     }
@@ -83,14 +84,26 @@ class ProfileViewController: UIViewController {
             screenNameLabel.text = screenName
         }
         if let status = user.status {
-            if !status.isEmpty {
-                statusBtn.tintColor = .black
-                statusBtn.setTitle(status, for: .normal)
+            let myUserIdInt = Int(NetworkManager.shared.accessToken!.userId)
+            if user.id == myUserIdInt {
+                if !status.isEmpty {
+                    statusBtn.tintColor = .black
+                    statusBtn.setTitle(status, for: .normal)
+                } else {
+                    statusBtn.tintColor = .link
+                    statusBtn.setTitle("Set status", for: .normal)
+                }
             } else {
-                statusBtn.tintColor = .link
-                statusBtn.setTitle("Set status", for: .normal)
+                if !status.isEmpty {
+                    statusBtn.tintColor = .black
+                    statusBtn.setTitle(status, for: .normal)
+                    statusBtn.isEnabled = false
+                } else {
+                    statusBtn.isHidden = true
+                    //statusBtn.setTitle("", for: .normal)
+                    //statusBtn.isEnabled = false
+                }
             }
-
         }
         if let city = user.city?.title {
             cityLabel.text = city
@@ -129,9 +142,6 @@ class ProfileViewController: UIViewController {
                 self?.user = user
                 self?.getAvatar()
                 self?.getPhotos(userId: userId)
-                DispatchQueue.main.async {
-
-                }
             case .failure:
                 print("FAILED")
             }
@@ -151,8 +161,28 @@ class ProfileViewController: UIViewController {
             }
         }
     }
+    
+    private func showStatusAlert() {
+        let alert = UIAlertController(title: "Set status", message: nil, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { action in
+            
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
-
+        alert.addTextField { (textField: UITextField) in
+            textField.placeholder = "Enter status"
+            textField.keyboardType = .default
+        }
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func statusButtonTap(_ sender: Any) {
+        showStatusAlert()
+    }
+    
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
