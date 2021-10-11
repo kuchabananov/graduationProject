@@ -35,6 +35,13 @@
 		E569940326E8BDA500F2C2EF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569940226E8BDA400F2C2EF /* NetworkManager.swift */; };
 		E569940526EA479500F2C2EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569940426EA479500F2C2EF /* User.swift */; };
 		E569940C26FC9C6500F2C2EF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569940B26FC9C6500F2C2EF /* Token.swift */; };
+		E56CA94B2712F0240090222A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CA94A2712F0240090222A /* Photos.swift */; };
+		E56CA94F27130C320090222A /* bananalogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E56CA94E27130C320090222A /* bananalogo.png */; };
+		E56CA955271311630090222A /* bananagif.gif in Resources */ = {isa = PBXBuildFile; fileRef = E56CA954271311630090222A /* bananagif.gif */; };
+		E56CA957271314440090222A /* loadinggif.gif in Resources */ = {isa = PBXBuildFile; fileRef = E56CA956271314440090222A /* loadinggif.gif */; };
+		E56CA95927131D890090222A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E56CA95827131D890090222A /* home.png */; };
+		E56CA95B27131E200090222A /* gohome.png in Resources */ = {isa = PBXBuildFile; fileRef = E56CA95A27131E200090222A /* gohome.png */; };
+		E56CA95D27133BF90090222A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CA95C27133BF90090222A /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,13 @@
 		E569940226E8BDA400F2C2EF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E569940426EA479500F2C2EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E569940B26FC9C6500F2C2EF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		E56CA94A2712F0240090222A /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		E56CA94E27130C320090222A /* bananalogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bananalogo.png; sourceTree = "<group>"; };
+		E56CA954271311630090222A /* bananagif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bananagif.gif; sourceTree = "<group>"; };
+		E56CA956271314440090222A /* loadinggif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadinggif.gif; sourceTree = "<group>"; };
+		E56CA95827131D890090222A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		E56CA95A27131E200090222A /* gohome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gohome.png; sourceTree = "<group>"; };
+		E56CA95C27133BF90090222A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,9 @@
 		E5689386270B0AA00039053F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				E56CA95A27131E200090222A /* gohome.png */,
+				E56CA95827131D890090222A /* home.png */,
+				E56CA94E27130C320090222A /* bananalogo.png */,
 				E568938F270B0DA60039053F /* home grey 7.png */,
 				E5689391270B0EE60039053F /* education grey 5.png */,
 				E5689393270B0F450039053F /* education2 grey 5.png */,
@@ -131,6 +148,8 @@
 		E568BFAE270C78BB00FE8B06 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				E56CA956271314440090222A /* loadinggif.gif */,
+				E56CA954271311630090222A /* bananagif.gif */,
 				E568BFAF270C78C900FE8B06 /* downloadgif.gif */,
 			);
 			path = Gifs;
@@ -158,6 +177,7 @@
 			children = (
 				E568BFBA270DA92D00FE8B06 /* InfoCell.swift */,
 				E568BFBC270DB3ED00FE8B06 /* FriendsListCell.swift */,
+				E56CA95C27133BF90090222A /* PhotoCollectionViewCell.swift */,
 			);
 			path = CellManager;
 			sourceTree = "<group>";
@@ -208,6 +228,7 @@
 				E569940B26FC9C6500F2C2EF /* Token.swift */,
 				E569940426EA479500F2C2EF /* User.swift */,
 				E568BFBF270EFC2600FE8B06 /* Friends.swift */,
+				E56CA94A2712F0240090222A /* Photos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,12 +342,17 @@
 				E5689384270AFEBC0039053F /* MainMenu.storyboard in Resources */,
 				E5689390270B0DA70039053F /* home grey 7.png in Resources */,
 				E56993FB26E3AE0500F2C2EF /* LaunchScreen.storyboard in Resources */,
+				E56CA94F27130C320090222A /* bananalogo.png in Resources */,
 				E568BFAD270C739A00FE8B06 /* AnimationView.xib in Resources */,
+				E56CA95927131D890090222A /* home.png in Resources */,
+				E56CA957271314440090222A /* loadinggif.gif in Resources */,
 				E5689398270B12250039053F /* add info.png in Resources */,
 				E5689396270B10840039053F /* follow grey 5.png in Resources */,
 				E5689392270B0EE60039053F /* education grey 5.png in Resources */,
 				E56993F826E3AE0500F2C2EF /* Assets.xcassets in Resources */,
 				E56993F326E3AE0300F2C2EF /* SignIn.storyboard in Resources */,
+				E56CA955271311630090222A /* bananagif.gif in Resources */,
+				E56CA95B27131E200090222A /* gohome.png in Resources */,
 				E568BFB0270C78C900FE8B06 /* downloadgif.gif in Resources */,
 				E5689394270B0F450039053F /* education2 grey 5.png in Resources */,
 			);
@@ -339,9 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56CA94B2712F0240090222A /* Photos.swift in Sources */,
 				E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */,
 				E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */,
 				E56993EC26E3AE0300F2C2EF /* AppDelegate.swift in Sources */,
+				E56CA95D27133BF90090222A /* PhotoCollectionViewCell.swift in Sources */,
 				E568BFC0270EFC2600FE8B06 /* Friends.swift in Sources */,
 				E568BFC327119EBC00FE8B06 /* FriendsViewController.swift in Sources */,
 				E569940326E8BDA500F2C2EF /* NetworkManager.swift in Sources */,

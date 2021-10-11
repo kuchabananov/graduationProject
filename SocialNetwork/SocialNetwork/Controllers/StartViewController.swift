@@ -9,7 +9,6 @@ import UIKit
 
 class StartViewController: UIViewController {
         
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,13 +18,6 @@ class StartViewController: UIViewController {
         webVC.delegate = self
         webVC.modalPresentationStyle = .overCurrentContext
         present(webVC, animated: true, completion: nil)
-    }
-    
-
-    @IBAction func qwerty(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "MainMenu", bundle: nil)
-        let mainMenuVC = storyboard.instantiateViewController(identifier: "tabBarController")
-        navigationController?.pushViewController(mainMenuVC, animated: true)
     }
     
 }

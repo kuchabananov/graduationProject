@@ -32,10 +32,9 @@ class NetworkManager {
     
     var accessToken: Token?
     
-    let urlAuth = "https://oauth.vk.com/authorize?client_id=7943589&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52"
+    let urlAuth = "https://oauth.vk.com/authorize?client_id=7943589&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52&revoke=1"
     private let serverUrl = "https://api.vk.com/method/"
     
-    //let getUser = serverPath + "users.get?user_ids=\(String(describing: NetworkManager.shared.accessToken?.userId))"
     private func presentWebView () {
         let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         if var topController = keyWindow?.rootViewController {
@@ -145,7 +144,33 @@ class NetworkManager {
             }
         }
     }
+    
+    func getPhotos(userId: String, completion: @escaping (Result<[Photo],NetworkError>) -> Void) {
         
+        struct Response: Decodable {
+            var response: Items?
+        }
+        
+        struct Items: Decodable {
+            var items: [Photo]?
+        }
+        
+        guard let url = createUrlWithParams(method: "photos.get", params: ["owner_id" : userId, "album_id" : "profile", "photo_size" : "1"]) else { return }
+        
+        var photos: [Photo]?
+        
+        performRequest(url: url) { data, error in
+            
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data!)
+                let items = response.response
+                photos = items?.items
+                completion(.success(photos!))
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }
+    }
         
 }
     

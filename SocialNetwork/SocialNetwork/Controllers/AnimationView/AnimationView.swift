@@ -13,7 +13,7 @@ class AnimationView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var animationImage: UIImageView!
-    
+    @IBOutlet weak var loadingImage: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +27,8 @@ class AnimationView: UIView {
     
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        animationImage.image = UIImage.gif(name: "downloadgif")
+        animationImage.image = UIImage.gif(name: "bananagif")
+        loadingImage.image = UIImage.gif(name: "loadinggif")
     }
     
     func commonInit() {

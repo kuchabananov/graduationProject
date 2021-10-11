@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE7-pv-o1M">
-                                <rect key="frame" x="132" y="451" width="150" height="48"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <rect key="frame" x="82" y="388" width="250" height="48"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="QAI-qG-4hY"/>
+                                    <constraint firstAttribute="width" constant="250" id="QAI-qG-4hY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -36,21 +36,30 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wd6-lw-n2k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsU-b7-ifx">
-                                <rect key="frame" x="174" y="272" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="qwerty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSE-Ya-k9n"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bananalogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-Qo-XQI">
+                                <rect key="frame" x="107" y="118" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cTP-pD-km8"/>
+                                    <constraint firstAttribute="height" constant="200" id="knT-ec-a4c"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello! To get started press the button &quot;Sing In&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-B7-FxW">
+                                <rect key="frame" x="82" y="451" width="250" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="bPd-B7-FxW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="BmB-Gf-bdU"/>
+                            <constraint firstItem="ZG5-Qo-XQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qum-RS-Heh"/>
+                            <constraint firstItem="ZG5-Qo-XQI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="S0Z-KU-iD0"/>
                             <constraint firstItem="PE7-pv-o1M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="boE-Af-ff9"/>
-                            <constraint firstItem="PE7-pv-o1M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="che-TQ-ZP0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPd-B7-FxW" secondAttribute="trailing" constant="82" id="chp-7Z-H4y"/>
+                            <constraint firstItem="PE7-pv-o1M" firstAttribute="top" secondItem="ZG5-Qo-XQI" secondAttribute="bottom" constant="70" id="rwZ-6k-unU"/>
+                            <constraint firstItem="bPd-B7-FxW" firstAttribute="top" secondItem="PE7-pv-o1M" secondAttribute="bottom" constant="15" id="vAu-my-9HX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FTa-yt-Cry"/>
@@ -79,11 +88,12 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="bananalogo.png" width="300" height="300"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

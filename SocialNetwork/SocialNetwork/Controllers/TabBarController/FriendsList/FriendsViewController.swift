@@ -53,8 +53,6 @@ class FriendsViewController: UITableViewController {
                 UIImage.loadImageFromUrl(url: url) { image in
                     DispatchQueue.main.async {
                         cell.friendPhoto.image = image
-                        cell.friendPhoto.layer.cornerRadius = 20
-                        cell.layoutIfNeeded()
                     }
                 }
             }
