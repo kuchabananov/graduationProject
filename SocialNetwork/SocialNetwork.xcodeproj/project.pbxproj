@@ -42,6 +42,7 @@
 		E56CA95927131D890090222A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E56CA95827131D890090222A /* home.png */; };
 		E56CA95B27131E200090222A /* gohome.png in Resources */ = {isa = PBXBuildFile; fileRef = E56CA95A27131E200090222A /* gohome.png */; };
 		E56CA95D27133BF90090222A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CA95C27133BF90090222A /* PhotoCollectionViewCell.swift */; };
+		E56CA95F2715BB0C0090222A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CA95E2715BB0C0090222A /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		E56CA95827131D890090222A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		E56CA95A27131E200090222A /* gohome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gohome.png; sourceTree = "<group>"; };
 		E56CA95C27133BF90090222A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E56CA95E2715BB0C0090222A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E568BFB2270C8BD100FE8B06 /* UIImage+SocialNetwork.swift */,
+				E56CA95E2715BB0C0090222A /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56CA95F2715BB0C0090222A /* UIView.swift in Sources */,
 				E56CA94B2712F0240090222A /* Photos.swift in Sources */,
 				E56993F026E3AE0300F2C2EF /* StartViewController.swift in Sources */,
 				E568BFB8270C990400FE8B06 /* TabBarController.swift in Sources */,

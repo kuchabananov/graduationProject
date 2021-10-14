@@ -55,6 +55,7 @@ class AddInfoViewController: UIViewController {
     }
     
     private func setupUI() {
+        view.layer.insertSublayer(UIView.setGradietnBackgroundView(view: view), at: 0)
         guard let user = self.user else { return }
         if let bDate = user.birthDate {
             bDateLabel.text = bDate

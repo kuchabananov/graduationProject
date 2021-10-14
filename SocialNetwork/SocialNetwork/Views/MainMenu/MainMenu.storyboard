@@ -234,7 +234,7 @@
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xuu-Kk-fTo">
                                                 <rect key="frame" x="20" y="364.5" width="374" height="425.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="3" id="IQ8-5K-gsg">
                                                     <size key="itemSize" width="120" height="120"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -298,7 +298,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="X5O-ef-VUL" firstAttribute="leading" secondItem="vja-PD-qKn" secondAttribute="leading" constant="20" id="0WX-iq-UQv"/>
                                             <constraint firstAttribute="bottom" secondItem="Xuu-Kk-fTo" secondAttribute="bottom" id="3FN-F1-tmT"/>
@@ -340,6 +340,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="vja-PD-qKn" firstAttribute="height" secondItem="ySY-1z-8Fm" secondAttribute="height" priority="250" id="58Q-sM-s4d"/>
                                     <constraint firstItem="vja-PD-qKn" firstAttribute="leading" secondItem="ySY-1z-8Fm" secondAttribute="leading" id="6JY-YF-GfR"/>
@@ -501,7 +502,7 @@
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AdS-CS-4gs">
                                                 <rect key="frame" x="20" y="200" width="374" height="220"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="220" id="9ZI-cG-Izz"/>
                                                 </constraints>
@@ -536,7 +537,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Fx6-4l-lXz" firstAttribute="centerY" secondItem="eCc-ex-OVZ" secondAttribute="centerY" id="B0p-M7-duL"/>
                                                                         <constraint firstItem="PH4-Iz-ng5" firstAttribute="leading" secondItem="eCc-ex-OVZ" secondAttribute="leading" id="EGr-Ol-dxL"/>
@@ -547,6 +548,7 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="eCc-ex-OVZ" firstAttribute="top" secondItem="SLe-0Q-myY" secondAttribute="top" id="5yQ-n6-jIh"/>
                                                                 <constraint firstItem="eCc-ex-OVZ" firstAttribute="leading" secondItem="SLe-0Q-myY" secondAttribute="leading" id="kqG-MN-2g7"/>
@@ -554,6 +556,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="eCc-ex-OVZ" secondAttribute="trailing" id="skd-Ro-Brl"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
                                                             <outlet property="infoImgView" destination="PH4-Iz-ng5" id="LHh-XD-lSL"/>
                                                             <outlet property="infoNameLabel" destination="fB0-Es-Vad" id="dew-V7-Sn7"/>
@@ -576,7 +579,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="HUA-dc-1G8" firstAttribute="leading" secondItem="lac-tE-30T" secondAttribute="leading" constant="20" id="5hs-ae-ndD"/>
                                             <constraint firstAttribute="trailing" secondItem="B85-IG-MrI" secondAttribute="trailing" constant="20" id="7If-YU-6j9"/>
@@ -608,6 +611,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lac-tE-30T" firstAttribute="top" secondItem="Wh8-Cl-vio" secondAttribute="top" id="Kc5-Z7-d0K"/>
                                     <constraint firstItem="lac-tE-30T" firstAttribute="leading" secondItem="Wh8-Cl-vio" secondAttribute="leading" id="LlE-5w-Kr3"/>

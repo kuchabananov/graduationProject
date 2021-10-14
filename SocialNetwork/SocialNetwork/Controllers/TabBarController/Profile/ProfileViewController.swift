@@ -41,6 +41,7 @@ class ProfileViewController: UIViewController {
     
     private func setupUI() {
         userPhoto.layer.cornerRadius = userPhoto.frame.size.width / 2
+        view.layer.insertSublayer(UIView.setGradietnBackgroundView(view: view), at: 0)
     }
     
     private func requestDataFromServer(userId: String) {

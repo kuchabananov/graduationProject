@@ -11,8 +11,9 @@ class StartViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.layer.insertSublayer(UIView.setGradietnBackgroundView(view: view), at: 0)
     }
-
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         let webVC = WebViewController()
         webVC.delegate = self

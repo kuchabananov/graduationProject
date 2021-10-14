@@ -14,6 +14,7 @@ class FriendsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //super.view.layer.insertSublayer(UIView.setGradietnBackgroundView(view: view), at: 0)
         tableView.separatorStyle = .none
     }
 
