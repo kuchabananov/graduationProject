@@ -187,9 +187,19 @@ class ProfileViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToAdd" {
+        if segue.identifier == "goToAddInfo" {
             let vc = segue.destination as? AddInfoViewController
             vc?.user = user
+        }
+        if segue.identifier == "goToFullPhoto" {
+            if let indexPaths = galleryCollectionView.indexPathsForSelectedItems {
+                let fullPhotoVC = segue.destination as! FullPhotoViewController
+                let photo = profilePhotos[indexPaths[0].row]
+                let sizeM = photo.sizes.filter( { return $0.type == "x" } ).first
+                if let urlStr = sizeM?.url {
+                    fullPhotoVC.urlPhotoStr = urlStr
+                }
+            }
         }
     }
     
@@ -234,5 +244,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section:Int) -> CGFloat {
             return 1
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToFullPhoto", sender: nil)
+    }
     
 }

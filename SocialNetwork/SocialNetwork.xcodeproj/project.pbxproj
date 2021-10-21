@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50B342F271EC59100686710 /* FullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50B342E271EC59100686710 /* FullPhotoViewController.swift */; };
 		E562F53227020C9C00DA43D6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562F53127020C9C00DA43D6 /* WebViewController.swift */; };
 		E5689384270AFEBC0039053F /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5689383270AFEBC0039053F /* MainMenu.storyboard */; };
 		E5689390270B0DA70039053F /* home grey 7.png in Resources */ = {isa = PBXBuildFile; fileRef = E568938F270B0DA60039053F /* home grey 7.png */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E50B342E271EC59100686710 /* FullPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewController.swift; sourceTree = "<group>"; };
 		E562F53127020C9C00DA43D6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E5689383270AFEBC0039053F /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		E568938F270B0DA60039053F /* home grey 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home grey 7.png"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				E568939A270B22ED0039053F /* ProfileViewController.swift */,
 				E568939C270B23020039053F /* AddInfoViewController.swift */,
+				E50B342E271EC59100686710 /* FullPhotoViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				E568BFB3270C8BD100FE8B06 /* UIImage+SocialNetwork.swift in Sources */,
 				E568BFBD270DB3ED00FE8B06 /* FriendsListCell.swift in Sources */,
 				E569940526EA479500F2C2EF /* User.swift in Sources */,
+				E50B342F271EC59100686710 /* FullPhotoViewController.swift in Sources */,
 				E56993EE26E3AE0300F2C2EF /* SceneDelegate.swift in Sources */,
 				E56993F626E3AE0300F2C2EF /* SocialNetwork.xcdatamodeld in Sources */,
 				E568939D270B23020039053F /* AddInfoViewController.swift in Sources */,

@@ -15,8 +15,8 @@ extension UIView {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
         layer.colors = [UIColor.yellow.cgColor, UIColor.white.cgColor]
-        layer.startPoint = CGPoint(x: 0, y: 0)
-        layer.endPoint = CGPoint(x: 1, y: 1)
+        layer.startPoint = CGPoint(x: 1, y: 0)
+        layer.endPoint = CGPoint(x: 0, y: 1)
         return layer
     }
     

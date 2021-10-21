@@ -9,13 +9,26 @@ import UIKit
 
 class FriendsViewController: UITableViewController {
    
+    @IBOutlet var friendsListTableView: UITableView!
+    
     var friends: [Friend] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //super.view.layer.insertSublayer(UIView.setGradietnBackgroundView(view: view), at: 0)
         tableView.separatorStyle = .none
+        setBackgroundGradient()
+    }
+    
+    private func setBackgroundGradient() {
+        let layer = CAGradientLayer()
+        layer.frame = friendsListTableView.bounds
+        layer.colors = [UIColor.yellow.cgColor, UIColor.white.cgColor]
+        layer.startPoint = CGPoint(x: 0, y: 0)
+        layer.endPoint = CGPoint(x: 1, y: 1)
+        let backgroundView = UIView(frame: friendsListTableView.bounds)
+        backgroundView.layer.insertSublayer(layer, at: 0)
+        friendsListTableView.backgroundView = backgroundView
     }
 
     func reloadPage(userId: String) {
@@ -62,7 +75,7 @@ class FriendsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50
+        60
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
